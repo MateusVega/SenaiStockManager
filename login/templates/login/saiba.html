@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'login/saiba.css' %}" />
+    <link rel="shortcut icon" href="{% static 'login/favicon.ico' %}" type="image/x-icon">
+    <title>Saiba Mais</title>
+  </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+  </style>
+
+  <body>
+    <main>
+      <div class="div1">
+        <div class="divmeio">
+          <div class="divcaixa">
+            <div class="divtitulo" id="titulo">
+              <p></p>
+              <center>
+                <p class="login">Saiba Mais</p>
+              </center>
+              <p></p>
+            </div>
+            <div class="texto">
+              <p>
+                A Integre é uma empresa comprometida com a excelência no
+                gerenciamento de patrimônios, especificamente voltada para as
+                necessidades do SESI e SENAI. Com um amplo conhecimento nas
+                melhores práticas e soluções inovadoras, a Integre se destaca
+                como uma parceira estratégica na administração de ativos,
+                garantindo eficiência, transparência e segurança nos processos.
+              </p>
+            </div>
+            <div class="divbut">
+              <a class="buttoncad" href="{% url 'cadastro' %}">Criar Conta</a>
+              <a class="buttoncad" href="{% url 'login' %}" style="margin-top: 10px;">Login</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

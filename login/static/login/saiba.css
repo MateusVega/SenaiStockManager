@@ -1,0 +1,177 @@
+*{
+    text-decoration: none;
+  }
+  
+  body{
+    margin: 0;
+    background-color: beige;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  ::placeholder{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 2.5vh;
+  }
+  
+  .text{
+    width: 32vw;
+    height: 7vh;
+    background-color: rgb(199, 199, 199);
+    margin-bottom: 3vh;
+    border-radius: 1vw;
+    border: 0;
+    padding: 0vw 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login{
+    color: #002549;
+    font-size: 10vh;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    padding: 0vw;
+    margin: 0vw;
+    position: absolute;
+    top: 3vh;
+    left: 26.3vw;
+  }
+  
+  .check {
+    width: 1vw;
+    height: 5vh;
+  }
+  
+  .contamobile{
+    display: none;
+  }
+  
+  .buttoncad{
+    background-color: transparent;
+    color: #002549;
+    font-size: 3vh;
+    border-bottom: 0.5vh solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .buttoncad:hover{
+    cursor: pointer;
+    border-bottom: 0.5vh solid #002549;
+  }
+  
+  .div1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .divmeio{
+    background-image: url("back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    box-shadow: 2px 2px 20px white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .divbut{
+    width: 10vw;
+    height: auto;
+    position: absolute;
+    bottom: 3vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .divcaixa{
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.377);
+    border: 0.1vh solid #002549;
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1vw;
+  }
+
+  .texto{
+    color: #002549;
+    font-size: 1.4vw;
+    width: 30vw;
+    text-align: center;
+    margin-top: -8vh;
+  }
+  
+  @media screen and (max-width: 1020px){
+
+    main{
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .div1{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .divmeio{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .divcaixa{
+      width: 80vw;
+      height: 85vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .text{
+      padding: 0px 10px;
+    }
+  
+    .buttoncad{
+      font-size: 2.5vh;
+      left: 0;
+    }
+
+    .buttoncad{
+      font-size: 2.5vh;
+      left: 0;
+    }
+  
+    .login{
+      font-size: 8vh;
+      position: absolute;
+      left: 22vw;
+      width: 20vw;
+      text-align: center;
+    }
+
+    .texto{
+      font-size: 3vw;
+      width: 50vw;
+      position: absolute;
+      left: 15vw;
+      bottom: 24vh;
+    }
+
+    .divbut{
+      width: 100vw;
+    }
+  }

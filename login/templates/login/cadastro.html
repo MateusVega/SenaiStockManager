@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'login/style.css' %}">
+	<link rel="shortcut icon" href="{% static 'login/favicon.ico' %}" type="image/x-icon">
+	<title>Cadastro</title>
+</head>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+<body>
+	<main>
+		<div class="div1">
+			<div class="div1-1">
+				<div class="div1-1-1">
+					<p class="pergunta">Já tem uma conta?</p>
+					<div class="div1-1-1-1">
+						<p class="buttoncad"><a href="{% url 'login' %}" style="color: white; text-decoration: none;">Logar</a></p>
+						<p class="buttoncad"><a href="{% url 'saiba' %}" style="color: white; text-decoration: none;">Saiba Mais</a></p>
+					</div>
+				</div>
+				<div class="div1-1-2">
+					<div class="div1-1-2-1" id="login">
+						<p></p>
+						<p class="login">Cadastrar</p>
+						<p></p>
+					</div>
+					<form action="{% url 'cadastro' %}" method="post">
+						{% csrf_token %}
+						<div class="div1-1-2-2">
+							<input type="username" name="username" id="username" placeholder="Usuario" class="text" required maxlength="15">
+                            <input type="email" name="email" id="email" placeholder="Email" class="text" required>
+							<input type="password" name="password" id="password" placeholder="Senha" class="text" required>
+						</div>
+						<div class="contamobile">
+							<a class="buttoncad" href="{% url 'login' %}" id="loginmobile" style="width: 60px; margin: 10px auto;">Login</a>
+						</div>
+						<div class="div1-1-2-1" id="fazer">
+							<p></p>
+							<input type="submit" value="Cadastrar" class="buttonlogin" style="margin-top: 15px; outline: none;">
+							<p></p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script>
+		document.getElementById("username").addEventListener("input", function (event) {
+			let value = this.value;
+			value = value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");//Acento
+			value = value.replace(/\s+/g, "");//Espaço
+			this.value = value.replace(/[^a-zA-Z0-9]/g, "");//Só letra e numero
+		});
+	</script>		
+</body>
+</html>

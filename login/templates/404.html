@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Página Não Encontrada</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #002549;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #002549;
+        }
+
+        .error-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        width: 90%;
+        max-width: 600px;
+        }
+
+        .error-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+
+        .error-code {
+        font-size: 8vh;
+        font-weight: bold;
+        color: #002549;
+        margin-bottom: 15px;
+        }
+
+        .error-text {
+        font-size: 2.5vh;
+        font-weight: normal;
+        color: #555;
+        margin-bottom: 20px;
+        }
+
+        .back-home {
+        font-size: 2.5vh;
+        color: #002549;
+        background-color: transparent;
+        border: 1px solid #002549;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        }
+
+        .back-home:hover {
+        background-color: #002549;
+        color: aliceblue;
+        transform: scale(1.05);
+        }
+
+        @media screen and (max-width: 1020px) {
+        .error-container {
+            width: 80%;
+            padding: 20px;
+        }
+
+        .error-code {
+            font-size: 10vh;
+        }
+
+        .error-text {
+            font-size: 3vh;
+            font-weight: bold;
+        }
+
+        .back-home {
+            font-size: 3vh;
+            padding: 12px 25px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-message">
+            <h1 class="error-code">404</h1>
+            <p class="error-text">Ops! A página que você está procurando não foi encontrada.</p>
+            <a href="/" class="back-home">Voltar para a página inicial</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'scan/add.css' %}">
+    <link rel="shortcut icon" href="{% static 'scan/favicon.ico' %}" type="image/x-icon">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+	<link rel="shortcut icon" href="{% static 'scan/favicon.ico' %}" type="image/x-icon">
+	<title>Adicionar Item</title>
+</head>
+
+<body>
+	<header>
+		<div class="logo"><a href="{% url 'reader:mecanica' %}">INTEGRE</a></div>
+	</header>
+	<div class="container">
+		<aside class="sidebar" id="nav">
+			<div class="logo"><a href="{% url 'reader:mecanica' %}"><img src="{% static 'scan/icon.png' %}"></a></div>
+			<nav>
+				<div class="part1" id="part1">
+					<ul>
+						{% if role == True %}
+						<li class="navegacao"> <a style=color:white href="{% url 'reader:add' %}"> &ensp; <span
+								class="material-symbols-outlined">add</span> &ensp; Adicionar Item </a></li>
+						{% endif %}
+						<li class="navegacao"> <a style=color:white href="{% url 'reader:mecanica' %}"> &ensp; <span
+								class="material-symbols-outlined">manufacturing</span> &ensp; Mecânica </a></li>
+						<li class="navegacao"> <a style=color:white href="{% url 'reader:eletrica' %}"> &ensp; <span
+								class="material-symbols-outlined">bolt</span> &ensp; Elétrica </a></li>
+						<li class="navegacao"> <a style=color:white href="{% url 'reader:eletronica' %}"> &ensp; <span
+								class="material-symbols-outlined">memory</span> &ensp; Eletrônica </a> </li>
+				</div>
+				</ul>
+				
+				<div class="part2" id="part2">
+					<ul>
+						{% if role == True %}
+						<li class="navegacao" style="margin-top: -7vh;"> <a style=color:white href="{% url 'admin:index' %}"> &ensp; <span
+								class="material-symbols-outlined">admin_panel_settings</span> &ensp; Admin </a></li>
+						{% endif %}
+                        <li class="navegacao"> <a style=color:white href="{% url 'reader:time' %}"> &ensp; <span
+							class="material-symbols-outlined">group</span> &ensp; Time </a></li>
+						<li class="navegacao"> <a style=color:white href="{% url 'reader:logout' %}"> &ensp; <span
+								class="material-symbols-outlined">logout</span> &ensp; Sair </a></li>
+				</div>
+				</ul>
+			</nav>
+		</aside>
+		<main>
+            <div id="fundo">
+				<div class="titulo">Adicionar Novo Item</div>
+				
+				<div class="preencher">
+					<form action="{% url 'reader:save_qr_data' %}" method="post" style="margin-top: 20px;">
+						<select name="tabela" id="tabela" required>
+							<option value="mecanica">Mecanica</option>
+							<option value="eletrica">Eletrica</option>
+							<option value="eletronica">Eletronica</option>
+						</select>
+						<input type="text" id="numero" placeholder="N° Patrimônio" name="numero" required>
+						<input type="text" id="nome" placeholder="Nome" name="nome" required>
+						<input type="text" id="local" placeholder="Local" name="local" required>
+						<input type="text" id="instrutor" placeholder="Instrutor" name="instrutor" required>
+						<input type="submit" id="enviar" value="ENVIAR">
+						<input type="button" id="qrcode" value="CRIAR QR CODE" onclick="generateQrCode()">
+					</form>
+					<div id="ImgBox">
+						<img src="" id="qrImage">
+					</div>
+				</div>
+        	</div>
+		</main>
+	</div>
+	
+	<script src="https://unpkg.com/html5-qrcode"></script>
+
+	<script>
+		function generateQrCode(){
+			imgbox = document.getElementById("ImgBox");
+			qrimg = document.getElementById("qrImage")
+			qrtext = document.getElementById("numero")
+
+			if (qrtext.value !== ""){
+				qrimg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${qrtext.value}`
+				qrimg.style.width = "200px"
+				qrimg.style.height = "200px"
+				qrimg.style.border = "3px solid black"
+				document.getElementById("fundo").style.height = "92vh"
+				document.getElementById("fundo").style.marginTop = "5vh"
+			} else{
+				alert("Preencha o número do item!")
+			}
+		}
+	</script>
+</body>
+</html>

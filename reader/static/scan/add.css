@@ -1,0 +1,323 @@
+* {
+	font-family: "Montserrat", sans-serif;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+.logo img{
+    width: 70%;
+    display: flex;
+    margin: 0px auto;
+}
+
+
+header a{
+	color: white;
+	font-size: 2em;
+	text-align: center;
+}
+
+/*barra lateral*/
+.sidebar {
+width: 15.5vw;
+background-color: #002549;
+padding: 20px;
+padding-top: 0px;
+}
+
+.logo{
+height: 22vh;
+}
+
+/*onde ta escrito o nome da pagina*/
+.logo img{
+width: 70%;
+display: flex;
+margin: 0px auto;
+}
+
+nav{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 74vh;
+}
+
+/*lista da barra lateral*/
+nav ul {
+list-style: none;
+padding: 0;
+}
+
+/*lista da barra lateral*/
+nav ul li {
+margin: 15px 0;
+}
+
+.navegacao {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: white;
+    font-size: 1vw;
+    border: 2px #00458a solid;
+    background-color: #002549;
+    border-radius: 12px;
+    width: 15vw;
+    height: 4.5vh;
+    text-align: start;
+    display: flex;
+    align-items: center;
+  
+    margin-bottom: 10px;
+  }
+  
+  .navegacao:hover {
+    cursor: pointer;
+    background-color: #00458a;
+  }
+  
+  a {
+    width: 100%;
+    height: 110%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+header {
+	display: none;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	margin: 0;
+	background-color: #182E5A;
+	color: white;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100vw;
+    background-color: #182E5A;
+}
+
+#fundo {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+    background-color: #002549;
+    border-radius: 2vw;
+    border: 2px solid #00458a;
+    width: 30vw;
+    height: 80vh;
+    margin-top: 10vh;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: auto;
+}
+
+select {
+	width: 20vw;
+	margin-bottom: 1vh;
+	height: 4vh;
+	border-radius: 0.2vw;
+}
+
+input {
+    font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	margin-bottom: 1vh;
+	border-radius: 0.3vw;
+    border: 0;
+    outline: 0;
+}
+
+#numero {
+	height: 4vh;
+	width: 19.7vw;
+	padding-left: 0.2vw;
+}
+
+#nome {
+	height: 4vh;
+	width: 19.7vw;
+	padding-left: 0.2vw;
+}
+
+#local {
+	height: 4vh;
+	width: 19.7vw;
+	padding-left: 0.2vw;
+}
+
+#instrutor {
+	height: 4vh;
+	width: 19.7vw;
+	padding-left: 0.2vw;
+}
+
+#enviar {
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	padding: 10px 20px;
+	background-color: #4CAF50;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	width: 10vw;
+	transition: transform .2s;
+    margin-top: 3vh;
+}
+
+#qrcode {
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	padding: 10px 20px;
+	background-color: #4CAF50;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	width: 10vw;
+	transition: transform .2s;
+    margin-top: 1vh;
+}
+
+#enviar:hover, #qrcode:hover{
+	transform: scale(1.2);
+}
+
+.container {
+	display: flex;
+}
+
+.sidebar {
+	width: 15.5vw;
+	background-color: #002549;
+	height: 100vh;
+	padding: 20px;
+}
+
+.titulo {
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+	font-size: 4.5vh;
+}
+
+.preencher {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 20vw;
+}
+
+@media screen and (max-width: 1020px) {
+
+	#fundo{
+		width: 80vw;
+		height: 70vh;
+	}
+
+	header {
+		height: 10vh;
+		background-color: #002549;
+		display: block;
+		padding-left: 2vw;
+	}
+
+	main {
+		width: 100vw;
+	}
+
+	select {
+		width: 50vw;
+		border-radius: 1.2vw;
+	}
+
+	input {
+		margin-bottom: 1vh;
+		border-radius: 1vw;
+		border: 0;
+	}
+
+	.logo {
+		height: 10vh;
+		display: flex;
+		align-items: center;
+	}
+
+	.sidebar {
+		display: none;
+	}
+
+	.preencher {
+		width: 100vw;
+	}
+
+	#numero {
+		height: 4vh;
+		width: 49vw;
+		padding-left: 1vw;
+	}
+
+	#nome {
+		height: 4vh;
+		width: 49vw;
+		padding-left: 1vw;
+	}
+
+	#local {
+		height: 4vh;
+		width: 49vw;
+		padding-left: 1vw;
+	}
+
+	#instrutor {
+		height: 4vh;
+		width: 49vw;
+		padding-left: 1vw;
+	}
+
+	#enviar {
+		font-family: "Montserrat", sans-serif;
+		font-weight: bold;
+		font-style: normal;
+		padding: 10px 20px;
+		background-color: #4CAF50;
+		border: none;
+		border-radius: 5px;
+		color: white;
+		cursor: pointer;
+		width: 37vw;
+	}
+
+	#qrcode {
+		font-family: "Montserrat", sans-serif;
+		font-weight: bold;
+		font-style: normal;
+		padding: 10px 20px;
+		background-color: #4CAF50;
+		border: none;
+		border-radius: 5px;
+		color: white;
+		cursor: pointer;
+		padding-right: 32vw;
+	}
+
+}
